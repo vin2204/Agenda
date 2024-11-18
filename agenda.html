@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <style>
+        /* Body with background image and gradient overlay */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('path_to_amadeus_logo.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Title styling */
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-top: 100px;
+            font-size: 4.5em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.2);
+            animation: titleAnimation 4s ease-out infinite;
+        }
+
+        /* Title animation */
+        @keyframes titleAnimation {
+            0% {
+                transform: scale(1);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Container for agenda */
+        .agenda {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .agenda:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Agenda items as modern cards */
+        .agenda-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        .agenda-item:hover {
+            transform: translateY(-5px);
+            background-color: #f7f7f7;
+        }
+
+        /* Alternating background colors for odd/even agenda items */
+        .agenda-item:nth-child(odd) {
+            background: #e3f2fd;
+        }
+
+        .agenda-item:nth-child(even) {
+            background: #fce4ec;
+        }
+
+        /* Time styling */
+        .time {
+            font-weight: bold;
+            color: #007bff;
+            font-size: 1.2em;
+        }
+
+        /* Event description styling */
+        .event {
+            margin-top: 8px;
+            color: #495057;
+            font-size: 1.1em;
+        }
+
+        /* Add some subtle hover effect for the time */
+        .time:hover {
+            color: #0056b3;
+        }
+
+        /* Mobile responsiveness */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+
+            .agenda {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .agenda-item {
+                font-size: 1em;
+                padding: 15px;
+            }
+        }
+
+        /* Smooth transition for background on hover */
+        .agenda-item {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Agenda</h1>
+
+    <!-- Agenda Container -->
+    <div class="agenda">
+        <!-- Agenda Items -->
+        <div class="agenda-item">
+            <div class="time">09:00 AM - 10:00 AM</div>
+            <div class="event">Opening Remarks</div>
+        </div>
+        <div class="agenda-item">
+            <div class="time">10:00 AM - 11:00 AM</div>
+            <div class="event">Keynote Speech</div>
+        </div>
+        <div class="agenda-item">
+            <div class="time">11:00 AM - 12:00 PM</div>
+            <div class="event">Panel Discussion</div>
+        </div>
+        <div class="agenda-item">
+            <div class="time">12:00 PM - 01:00 PM</div>
+            <div class="event">Lunch Break</div>
+        </div>
+        <div class="agenda-item">
+            <div class="time">01:00 PM - 02:00 PM</div>
+            <div class="event">Workshop</div>
+        </div>
+        <div class="agenda-item">
+            <div class="time">02:00 PM - 03:00 PM</div>
+            <div class="event">Networking Session</div>
+        </div>
+        <div class="agenda-item">
+            <div class="time">03:00 PM - 04:00 PM</div>
+            <div class="event">Closing Remarks</div>
+        </div>
+    </div>
+
+</body>
+</html>
